@@ -1,0 +1,28 @@
+<section class="portfolio mainContainer d-flex align-items-center py-5">
+  <div
+    class="container py-4 d-flex justify-content-center flex-column align-items-center"
+  >
+    <div class="title text-center">
+      <h2 class="text-uppercase mb-3 fs-2">contact component</h2>
+      <app-line></app-line>
+    </div>
+    <div class="row inputForm gy-4">
+      <div class="col-12" *ngFor="let inputField of inputFields; index as i">
+        <label
+          [for]="inputField.placeholder"
+          [class.hideLabel]="inputField.inputValueLength === 0"
+          >{{ inputField.placeholder }} :</label
+        >
+        <input
+          [type]="inputField.dataType"
+          [id]="inputField.placeholder"
+          [(ngModel)]="inputField.inputValue"
+          (input)="getLength(i)"
+          class="form-control py-3 position-relative"
+          placeholder="Enter your {{ inputField.placeholder }}"
+        />
+      </div>
+    </div>
+    <button class="btn btn-main mt-5">Send Message</button>
+  </div>
+</section>

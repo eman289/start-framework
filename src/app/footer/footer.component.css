@@ -1,0 +1,20 @@
+.socialMedia a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+.socialMedia li:hover a {
+  background-color: #fff;
+  color: var(--secColor);
+}
+
+.copyrights {
+  background-color: #243342;
+}

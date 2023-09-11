@@ -1,0 +1,9 @@
+.line {
+  height: 4px;
+  width: 80px;
+  background-color: var(--secColor);
+}
+
+i {
+  color: var(--secColor);
+}

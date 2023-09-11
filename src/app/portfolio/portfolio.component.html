@@ -1,0 +1,33 @@
+<section class="portfolio mainContainer d-flex align-items-center py-5">
+  <div
+    class="container py-4 d-flex justify-content-center flex-column align-items-center"
+  >
+    <div class="title text-center">
+      <h2 class="text-uppercase mb-3 fs-2">portfolio component</h2>
+      <app-line></app-line>
+    </div>
+    <div class="row g-5 pt-5">
+      <div class="col-md-6 col-lg-4" *ngFor="let imgPath of imgsPaths">
+        <div
+          class="item rounded-2 overflow-hidden position-relative"
+          (click)="openImage(imgPath)"
+        >
+          <img [src]="imgPath" class="w-100" alt="image" />
+          <div class="layer">
+            <i class="fa-solid fa-plus fa-6x"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Image lightBox -->
+    <div
+      class="lightBox bg-primary bg-opacity-25"
+      [class.d-none]="selectedImagePath == null"
+      (click)="closeImage($event)"
+    >
+      <div class="imgBox">
+        <img [src]="selectedImagePath" class="w-100" alt="image" />
+      </div>
+    </div>
+  </div>
+</section>
